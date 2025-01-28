@@ -1,0 +1,58 @@
+# version: '3'
+# services:
+#   strapi:
+#     image: my-app-dewa
+#     ports:
+#       - 1337:1337
+#     environment:
+#       DATABASE_CLIENT: postgres
+#       DATABASE_HOST: db
+#       DATABASE_PORT: 5432
+#       DATABASE_NAME: dewa-apps
+#       DATABASE_USERNAME: postgres
+#       DATABASE_PASSWORD: 12345
+#       APP_KEYS: "VLvGduUjbiFeDvRsYyXsaA==,SDM1U1zFyEhSMcAu8lfdqw==,lj4j3uQ01tQZPZkGAG1teQ==,TphV2klLBTwwVJaqCA2xdw=="
+#       API_TOKEN_SALT : PVv5NSN/cb/Ee4ast8Jtnw==
+#       ADMIN_JWT_SECRET : 334osgmwR7ckt9dYsNxwNg==
+#       TRANSFER_TOKEN_SALT : CZcbxFA6mWAf4TfoymTllQ==
+#     depends_on:
+#       - db
+
+#   db:
+#     image: postgres:15
+#     environment:
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASSWORD: 123456
+#       POSTGRES_DB: dewa-apps
+#     ports:
+#       - 5435:5432
+
+
+version: '3'
+services:
+  strapi:
+    image: my-app-dewa
+    ports:
+      - 1337:1337
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_NAME: dewa-apps
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: 12345
+      APP_KEYS: "VLvGduUjbiFeDvRsYyXsaA==,SDM1U1zFyEhSMcAu8lfdqw==,lj4j3uQ01tQZPZkGAG1teQ==,TphV2klLBTwwVJaqCA2xdw=="
+      API_TOKEN_SALT: "PVv5NSN/cb/Ee4ast8Jtnw=="
+      ADMIN_JWT_SECRET: "334osgmwR7ckt9dYsNxwNg=="
+      TRANSFER_TOKEN_SALT: "CZcbxFA6mWAf4TfoymTllQ=="
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: dewa-apps
+    ports:
+      - 5435:5432
