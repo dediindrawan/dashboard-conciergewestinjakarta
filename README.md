@@ -26,6 +26,7 @@ yarn start
 
 Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
 
+https://github.com/dediindrawan/dashboard-conciergewestinjakarta
 ```
 npm run build
 # or
